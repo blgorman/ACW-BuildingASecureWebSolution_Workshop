@@ -13,7 +13,7 @@ permissions:
   id-token: write  # Write ID token to authenticate with federated credentials
 
 jobs:
-  call-common:
+  deploy-architecture:
     uses: ./.github/workflows/deploy-architecture.yml
     with:
       parametersFile: 'iac/main.parameters.primary.json'
