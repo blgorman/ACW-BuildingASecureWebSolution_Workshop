@@ -1,0 +1,13 @@
+<Project>
+    <PropertyGroup>
+        <TargetFrameworkVersion>net9.0</TargetFrameworkVersion>
+        <AzureIdentityVersion>1.14.1</AzureIdentityVersion>
+        <MicrosoftApplicationInsightsAspNetCoreVersion>2.23.0</MicrosoftApplicationInsightsAspNetCoreVersion>
+        <MicrosoftAspNetCoreDiagnosticsEntityFrameworkCoreVersion>9.0.6</MicrosoftAspNetCoreDiagnosticsEntityFrameworkCoreVersion>
+        <MicrosoftAspNetCoreIdentityEntityFrameworkCoreVersion>9.0.6</MicrosoftAspNetCoreIdentityEntityFrameworkCoreVersion>
+        <MicrosoftAspNetCoreIdentityUIVersion>9.0.6</MicrosoftAspNetCoreIdentityUIVersion>
+		<MicrosoftAzureAppConfigurationAspNetCoreVersion>8.2.0</MicrosoftAzureAppConfigurationAspNetCoreVersion>
+        <MicrosoftEntityFrameworkCoreSqlServerVersion>9.0.6</MicrosoftEntityFrameworkCoreSqlServerVersion>
+        <MicrosoftEntityFrameworkCoreToolsVersion>9.0.6</MicrosoftEntityFrameworkCoreToolsVersion>
+    </PropertyGroup>
+</Project>
