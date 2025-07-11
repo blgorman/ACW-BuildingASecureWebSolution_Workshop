@@ -25,7 +25,7 @@ param githubRepository string
 @description('Name of the deployment environment')
 param deploymentEnvironment string
 
-var managedIdentityName = 'id-${applicationName}-${locationAbbreviation}-${deploymentEnvironment}'
+var managedIdentityName = 'mi-${applicationName}-${locationAbbreviation}-${deploymentEnvironment}'
 var fcName = 'fc-${applicationName}-${deploymentEnvironment}'
 var tags = {
   environment: deploymentEnvironment
