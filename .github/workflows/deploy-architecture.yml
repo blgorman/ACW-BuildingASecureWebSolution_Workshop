@@ -1,4 +1,4 @@
-name: Deploy Bicep Templates
+name: Deploy Regional architecture
 
 on:
   workflow_call:

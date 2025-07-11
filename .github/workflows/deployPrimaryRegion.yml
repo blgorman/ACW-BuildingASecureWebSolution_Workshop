@@ -3,9 +3,9 @@ name: Deploy to Primary Region
 on:
   push:
     branches:
-    - main  # Trigger deployment on push to the main branch
+      - main 
     paths:
-    - 'iac/**'  # Only trigger if the 'iac' folder is changed
+      - 'iac/**'  
   workflow_dispatch:
 
 permissions:
