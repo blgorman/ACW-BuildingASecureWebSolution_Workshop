@@ -1,4 +1,4 @@
-name: Deploy to Primary Region
+name: Deploy Architecture to Primary Region
 
 on:
   push:
@@ -9,12 +9,12 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read  # Read repository content (necessary for checkout)
-  id-token: write  # Write ID token to authenticate with federated credentials
+  contents: read  
+  id-token: write  
 
 jobs:
   deploy-architecture:
-    uses: ./.github/workflows/deploy-architecture.yml
+    uses: ./.github/workflows/deploy-architecture-common.yml
     with:
       parametersFile: 'iac/main.parameters.primary.json'
       location: 'centralus'

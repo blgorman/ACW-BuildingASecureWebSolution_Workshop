@@ -24,8 +24,8 @@ on:
         required: true
 
 permissions:
-  contents: read  # Read repository content (necessary for checkout)
-  id-token: write  # Write ID token to authenticate with federated credentials
+  contents: read  
+  id-token: write  
 
 jobs:
   deploy:
