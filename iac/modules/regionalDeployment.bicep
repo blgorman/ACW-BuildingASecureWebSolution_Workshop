@@ -24,6 +24,10 @@ param spokeResourceGroupName string
 param addressPrefix01 int
 param addressPrefix02 int
 
+//vnet peering
+param hubVNetName string
+param hubResourceGroupName string
+
 param tags object
 
 resource spokeRG 'Microsoft.Resources/resourceGroups@2021-04-01' existing = {
@@ -41,5 +45,15 @@ module spokeVNet 'spokeVNet.bicep' = {
     location: location
     locationAbbreviation: locationAbbreviation
     tags: tags
+  }
+}
+
+module vnetPeering 'vnetPeering/vnetPeering.bicep' = {
+  name: 'vnetpeering-deployment-${applicationName}-${location}-${environmentName}'
+  params: {
+    rgHubName: hubResourceGroupName
+    rgSpokeName: spokeResourceGroupName
+    vnetHubName: hubVNetName
+    vnetSpokeName: spokeVNet.outputs.vnetSpokeName
   }
 }

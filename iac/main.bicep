@@ -67,5 +67,7 @@ module regionalDeployment 'modules/regionalDeployment.bicep' = {
     addressPrefix01: addressPrefix01
     addressPrefix02: addressPrefix02Spoke
     tags: tags
+    hubResourceGroupName: rgHub.name
+    hubVNetName: hubVNet.outputs.vnetHubName
   }
 }
