@@ -13,6 +13,12 @@
         },
         "locationAbbreviation": {
             "value": "cus"
+        },
+        "addressPrefix01": {
+        "value": 10
+        },
+        "addressPrefix02Hub": {
+            "value": 150
         }
     }
 }
