@@ -48,7 +48,7 @@ module spokeVNet 'spokeVNet.bicep' = {
   }
 }
 
-module vnetPeering 'vnetPeering/vnetPeering.bicep' = {
+module vnetPeering 'VNetPeering/VNetPeering.bicep' = {
   name: 'vnetpeering-deployment-${applicationName}-${location}-${environmentName}'
   params: {
     rgHubName: hubResourceGroupName
