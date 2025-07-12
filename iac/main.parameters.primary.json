@@ -19,6 +19,9 @@
         },
         "addressPrefix02Hub": {
             "value": 150
+        },
+        "addressPrefix02Spoke": {
+            "value": 151
         }
     }
 }

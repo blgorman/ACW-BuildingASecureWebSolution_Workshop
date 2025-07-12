@@ -22,6 +22,7 @@ param locationAbbreviation string
 //vnet hub
 param addressPrefix01 int = 10
 param addressPrefix02Hub int = 150
+param addressPrefix02Spoke int = 151
 
 var tags = {
   environment: environmentName
@@ -51,5 +52,20 @@ module hubVNet 'modules/hubVNet.bicep' = {
     tags: tags
     addressPrefix01: addressPrefix01
     addressPrefix02: addressPrefix02Hub
+  }
+}
+
+module regionalDeployment 'modules/regionalDeployment.bicep' = {
+  name: 'regional-deployment-spoke-${applicationName}-${locationAbbreviation}-${environmentName}'
+  scope: subscription() 
+  params: {
+    spokeResourceGroupName: rgApp.name
+    location: location
+    applicationName: applicationName
+    environmentName: environmentName
+    locationAbbreviation: locationAbbreviation
+    addressPrefix01: addressPrefix01
+    addressPrefix02: addressPrefix02Spoke
+    tags: tags
   }
 }
