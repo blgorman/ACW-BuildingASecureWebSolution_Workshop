@@ -17,6 +17,7 @@ param location string
 @description('Primary location for all resources')
 param locationAbbreviation string
 
+@description('Tags for all resources')
 param tags object
 
 //vnet

@@ -12,12 +12,14 @@ param environmentName string
 param applicationName string
 
 @minLength(1)
-@description('Primary location for all resources')
+@description('location for all resources')
 param location string
 
+@description('Abbreviation for the location for all resources')
 param locationAbbreviation string
 
 //group info
+@description('Name of the resource group for the spoke VNet')
 param spokeResourceGroupName string
 
 //vnet
