@@ -1,4 +1,4 @@
-name: Deploy Regional architecture
+name: Deploy Regional Architecture - Common Workflow
 
 on:
   workflow_call:
