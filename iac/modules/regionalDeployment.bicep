@@ -30,6 +30,7 @@ param addressPrefix02 int
 param hubVNetName string
 param hubResourceGroupName string
 
+@description('Tags for all resources')
 param tags object
 
 resource spokeRG 'Microsoft.Resources/resourceGroups@2021-04-01' existing = {
